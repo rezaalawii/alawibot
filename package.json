@@ -1,0 +1,52 @@
+{
+  "name": "erlangftsiesta",
+  "version": "1.2.4",
+  "description": "",
+  "main": "output/index.js",
+  "type": "module",
+  "scripts": {
+    "copy-files": "copyfiles -u 1 src/commands/**/*.mp3 dist/",
+    "clean": "rimraf dist/",
+    "build": "npm run clean && tsc && npm run copy-files",
+    "start": "npm run build && node dist/index.js",
+    "loadCmd": "npm run build && node dist/loadWebsiteCmds.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VyshicxFtSiesta"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VyshicxFtSiesta"
+  },
+  "homepage": "https://github.com/VyshicxFtSiesta",
+  "devDependencies": {
+    "@types/express": "^4.17.15",
+    "@types/fluent-ffmpeg": "^2.1.20",
+    "@types/mime-types": "^2.1.1",
+    "@typescript-eslint/eslint-plugin": "^5.7.0",
+    "@typescript-eslint/parser": "^5.7.0",
+    "eslint": "^8.4.1",
+    "eslint-config-google": "^0.14.0",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "@discordjs/collection": "^0.7.0",
+    "@open-wa/wa-automate": "^4.66.3",
+    "axios": "^0.27.2",
+    "copyfiles": "^2.4.1",
+    "dotenv": "^16.0.1",
+    "enkanetwork": "^1.2.5",
+    "fast-speedtest-api": "github:honzahommer/fast-speedtest-api",
+    "ffmpeg-static": "^5.1.0",
+    "fluent-ffmpeg": "^2.1.2",
+    "mime-types": "^2.1.35",
+    "mongoose": "^6.4.4",
+    "openai": "^3.1.0",
+    "sagiri": "^3.4.0",
+    "update": "^0.7.4",
+    "ytdl-core": "^4.11.2"
+  }
+}
